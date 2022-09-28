@@ -20,12 +20,12 @@ const Home = () => {
     },
     {
       id: 4,
-      title: "womens",
+      title: "women",
       imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
     },
     {
       id: 5,
-      title: "mens",
+      title: "men",
       imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
     },
   ];
