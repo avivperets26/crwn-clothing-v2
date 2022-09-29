@@ -20,18 +20,14 @@ const SignInForm = () => {
     setFormField(defaultFormField);
   };
   const SignInWithGoogleUser = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await SignIncreateAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
-      console.log(response);
+      await SignIncreateAuthUserWithEmailAndPassword(email, password);
+
       resetFormFields();
     } catch (error) {
       switch (error.code) {
