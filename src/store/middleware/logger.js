@@ -1,3 +1,5 @@
+//src\store\middleware\logger.js
+
 export const loggerMiddleware = (store) => (next) => (action) => {
   if (!action.type) {
     return next(action);

@@ -1,28 +1,58 @@
+// src/index.js
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { PersistGate } from "redux-persist/integration/react";
+//import { PersistGate } from "redux-persist/integration/react";
 import reportWebVitals from "./reportWebVitals";
 import { Elements } from "@stripe/react-stripe-js";
 import { stripePromise } from "./utils/stripe/stripe.utils";
 import App from "./App";
-import { store, persistor } from "./store/store";
+import { store } from "./store/store"; // Importing store directly
 
 import "./index.scss";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      {/*<PersistGate loading={null} persistor={persistor}>*/}
       <BrowserRouter>
         <Elements stripe={stripePromise}>
           <App />
         </Elements>
       </BrowserRouter>
-      {/* </PersistGate>*/}
     </Provider>
   </React.StrictMode>
 );
 
 reportWebVitals();
+
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// import { BrowserRouter } from "react-router-dom";
+// import { Provider } from "react-redux";
+// import { PersistGate } from "redux-persist/integration/react";
+// import reportWebVitals from "./reportWebVitals";
+// import { Elements } from "@stripe/react-stripe-js";
+// import { stripePromise } from "./utils/stripe/stripe.utils";
+// import App from "./App";
+// import { store, persistor } from "./store/store";
+
+// import "./index.scss";
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//   <React.StrictMode>
+//     <Provider store={store}>
+//       {/*<PersistGate loading={null} persistor={persistor}>*/}
+//       <BrowserRouter>
+//         <Elements stripe={stripePromise}>
+//           <App />
+//         </Elements>
+//       </BrowserRouter>
+//       {/* </PersistGate>*/}
+//     </Provider>
+//   </React.StrictMode>
+// );
+
+// reportWebVitals();
