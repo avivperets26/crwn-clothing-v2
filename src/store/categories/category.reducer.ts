@@ -1,10 +1,10 @@
-//src\store\categories\category.reducer.ts
-
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { CategoriesState, Category } from "../../types/types";
 
 const CATEGORIES_INITIAL_STATE: CategoriesState = {
   categories: [],
+  isLoading: false,
+  error: null
 };
 
 const categoriesSlice = createSlice({

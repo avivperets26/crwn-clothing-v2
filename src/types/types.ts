@@ -16,8 +16,14 @@ export interface Category {
     items: CategoryItem[]; // Add the items property
 }
 
+export interface CategoryMap {
+    [key: string]: CategoryItem[]
+}
+
 export interface CategoriesState {
     categories: Category[];
+    isLoading: boolean;
+    error: Error | null;
 }
 // Define the type of your cart item
 export interface CartItem {
