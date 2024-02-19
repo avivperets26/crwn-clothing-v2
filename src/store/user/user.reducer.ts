@@ -3,7 +3,9 @@ import { UserState } from "../../types/types";
 
 // Define the initial state
 const INITIAL_STATE: UserState = {
-  currentUser: null
+  currentUser: null,
+  isLoading: false,
+  error: null
 };
 
 // Create a slice for user state management
@@ -12,7 +14,10 @@ export const userSlice = createSlice({
   initialState: INITIAL_STATE,
   reducers: {
     setCurrentUser(state: UserState, action: PayloadAction<any>) {
-      state.currentUser = action.payload;
+      return {
+        ...state,
+        currentUser: action.payload
+      };
     },
   },
 });

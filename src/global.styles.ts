@@ -1,0 +1,24 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    padding: 20px 40px;
+    margin: 0;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  * {
+    box-sizing: border-box;
+  }
+`;

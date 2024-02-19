@@ -1,9 +1,15 @@
 
 //src\types\types.ts
 
+import { UserData } from "../utils/firebase/firebase.utils";
+
+
 export interface UserState {
-    currentUser: any; // Replace 'any' with the actual type of currentUser
-}
+    readonly currentUser: UserData | null;
+    readonly isLoading: boolean;
+    readonly error: Error | null;
+};
+
 export interface CategoryItem {
     id: string;
     imageUrl: string;
