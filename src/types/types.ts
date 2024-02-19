@@ -5,10 +5,11 @@ export interface UserState {
     currentUser: any; // Replace 'any' with the actual type of currentUser
 }
 export interface CategoryItem {
-    id: number;
+    id: string;
     imageUrl: string;
     name: string;
     price: number;
+    quantity: number;
 }
 export interface Category {
     imageUrl: string;
@@ -28,8 +29,10 @@ export interface CategoriesState {
 // Define the type of your cart item
 export interface CartItem {
     id: string;
-    price: number; // Add the price property
-    quantity: number; // Add the quantity property
+    name: string;
+    imageUrl: string;
+    price: number;
+    quantity: number;
 }
 
 // Define the type of your cart state
